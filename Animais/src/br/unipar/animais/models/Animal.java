@@ -8,7 +8,11 @@ public class Animal {
     private int numPatas;
     private String cor;
     private String ambiente;
-    private int velocidade;
+    private double velocidade;
+
+    public Animal() {
+        this.numPatas = 4;
+    }
 
     public String getNome() {
         return nome;
@@ -50,13 +54,17 @@ public class Animal {
         this.ambiente = ambiente;
     }
 
-    public int getVelocidade() {
+    public double getVelocidade() {
         return velocidade;
     }
 
-    public void setVelocidade(int velocidade) {
+    public void setVelocidade(double velocidade) {
         this.velocidade = velocidade;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Animal{" + "nome=" + nome + ", comprimento=" + comprimento + ", numPatas=" + numPatas + ", cor=" + cor + ", ambiente=" + ambiente + ", velocidade=" + velocidade + '}';
+    }
+        
 }
